@@ -1,3 +1,13 @@
 # English strings go here for Rails i18n
 en:
   # my_label: "My label"
+  spent_time_queries: Spent time queries
+  show_all_queries: Show all queries
+  saved_spent_time_queries: Saved spent time queries
+  yes_answer: Yes
+  no_answer: No
+  delete_action: Delete
+  show_action: Show
+  name: Name
+  author: Author
+  public: Public?

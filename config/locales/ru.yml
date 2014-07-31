@@ -1,0 +1,12 @@
+# Russian strings go here for Rails i18n
+ru:
+  spent_time_queries: Spent time queries
+  show_all_queries: Показать все запросы
+  saved_spent_time_queries: Сохраненные запросы по затраченному времени
+  yes_answer: Да
+  no_answer: Нет
+  delete_action: Удалить
+  show_action: Показать
+  name: Имя
+  author: Автор
+  public: Публичный?

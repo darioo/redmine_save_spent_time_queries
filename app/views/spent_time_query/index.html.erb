@@ -1,24 +1,23 @@
-<h2>Saved spent time queries</h2>
+<h2><%= l(:saved_spent_time_queries) %></h2>
 
 
 <div style="width: 70%">
 
 	<% if User.current.admin %>
 	<p>
-		<%= form_tag 'spent_time_query', :method => "get", :id => "spent_time_form" do %>
-			<%= check_box_tag :filter, "all", @filter == "all", :onclick => "this.form.submit();" %>
-			<%= label_tag :filter, "Show all queries" %>		
-	
+		<%= form_tag 'spent_time_query', :method => 'get', :id => 'spent_time_form' do %>
+			<%= check_box_tag :filter, 'all', @filter == 'all', :onclick => 'this.form.submit();' %>
+          <%= label_tag :filter, l(:show_all_queries) %>
 		<% end %>
 	</p>
 	<% end %>
-	
+
 	<table class="list time-entries">
 	<thead>
 	  <tr>
-		<th>Name</th>
-		<th style="text-align: center">Public</th>
-		<th style="text-align: center">Author</th>
+		<th><%= l(:name) %></th>
+		<th style="text-align: center"><%= l(:public) %></th>
+		<th style="text-align: center"><%= l(:author) %></th>
 		<th>&nbsp;&nbsp;&nbsp;</th>
 	  </tr>
 	</thead>
@@ -31,33 +30,33 @@
 	  		</a>
 	  	</td>
 	  	<td align="center">
-	  		<%= (query.is_public ? "Yes" : "No") %>
-	  	</td>  	
+	  		<%= (query.is_public ? l(:yes_answer) : l(:no_answer)) %>
+	  	</td>
 		<td align="center">
-			
+
 			<% begin %>
-			
+
 	  		<%= link_to query.user.login, { :controller => 'people', :action => 'show', :id => query.user_id } %>
-	  		
+
 	  		<% rescue %>
-	  		
+
 	  		<%= link_to query.user.login, { :controller => 'users', :action => 'show', :id => query.user_id } %>
-	  		
+
 	  		<% end %>
-	  	
-	  	</td>  	
+
+	  	</td>
 	 	<td align="center">
-	 		
+
 	 		<% if @project_id.nil? %>
-	 		
-	 		<%= link_to 'Delete', { :action => 'delete', :query_id => query[:id] }, :method => :delete %>
-	 		
+
+	 		<%= link_to l(:delete_action), { :action => 'delete', :query_id => query[:id] }, :method => :delete %>
+
 	 		<% else %>
-	 		
-	 		<%= link_to 'Delete', { :action => 'delete', :id =>@project_id, :query_id => query[:id] }, :method => :delete %>
-	 		
+
+	 		<%= link_to l(:delete_action), { :action => 'delete', :id =>@project_id, :query_id => query[:id] }, :method => :delete %>
+
 	 		<% end %>
-	 	</td>  	
+	 	</td>
 	  </tr>
 	<% end %>
 	</tbody>

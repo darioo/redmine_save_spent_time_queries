@@ -10,6 +10,6 @@ Redmine::Plugin.register :redmine_save_spent_time_queries do
   url 'http://example.com/path/to/plugin'
   author_url 'http://example.com/about'
     
-  menu :top_menu, :spent_time_query, { :controller => 'timelog', :action => 'index' }, :caption => 'Spent time queries '
+  menu :top_menu, :spent_time_query, { :controller => 'spent_time_query', :action => 'index' }, :caption => :spent_time_queries
 
 end
