@@ -11,3 +11,6 @@ en:
   name: Name
   author: Author
   public: Public?
+  saved_spent_time_query: Save spent time query
+  spent_time_query_name: Name
+

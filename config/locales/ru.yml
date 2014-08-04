@@ -10,3 +10,5 @@ ru:
   name: Имя
   author: Автор
   public: Публичный?
+  saved_spent_time_query: Сохранение запроса по затраченному времени
+  spent_time_query_name: Имя
