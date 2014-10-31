@@ -1,0 +1,16 @@
+# English strings go here for Rails i18n
+pl:
+  # my_label: "My label"
+  spent_time_queries: Przepracowany czas
+  show_all_queries: Pokaż wszystkie kwerendy
+  saved_spent_time_queries: Wszyskie kwerendy
+  yes_answer: Tak
+  no_answer: Nie
+  delete_action: Usuń
+  show_action: Pokaż
+  name: Nazwa
+  author: Autor
+  public: Publiczny?
+  saved_spent_time_query: Zapisz kwerendę
+  spent_time_query_name: Nazwa
+
